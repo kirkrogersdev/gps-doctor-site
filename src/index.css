@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cormorant Garamond", "Georgia", serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-forest-50: #f1f6f0;
+  --color-forest-100: #dfeadb;
+  --color-forest-200: #bdd4b5;
+  --color-forest-300: #92b886;
+  --color-forest-400: #6a9a5c;
+  --color-forest-500: #4f7a3a;
+  --color-forest-600: #3d6230;
+  --color-forest-700: #2f4d27;
+  --color-forest-800: #243d20;
+  --color-forest-900: #1f3d2b;
+  --color-forest-950: #122218;
+
+  --color-leaf: #8dbf4a;
+  --color-leaf-soft: #c9df9b;
+
+  --color-cream: #f7f5ee;
+  --color-sand: #ede8d8;
+  --color-sand-dark: #d9d2bc;
+  --color-ink: #1c1a17;
+  --color-stone: #6b6a63;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-cream text-ink font-sans antialiased;
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-display);
+}
+
+::selection {
+  background: var(--color-leaf-soft);
+}
+
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf focus-visible:ring-offset-2 focus-visible:ring-offset-cream;
+}
+.btn-primary {
+  @apply btn bg-forest-900 text-cream hover:bg-forest-700 hover:shadow-lg hover:shadow-forest-900/20;
+}
+.btn-secondary {
+  @apply btn border border-forest-900/20 bg-white/60 text-forest-900 hover:border-forest-900 hover:bg-white;
+}
+.btn-light {
+  @apply btn bg-cream text-forest-900 hover:bg-white;
+}
+.btn-ghost-light {
+  @apply btn border border-cream/40 text-cream hover:bg-cream/10;
+}
+
+.eyebrow {
+  @apply text-xs font-semibold uppercase tracking-[0.18em] text-forest-500;
+}
+
+.prose-gps {
+  @apply text-[17px] leading-relaxed text-ink/85;
+}
+.prose-gps h2 {
+  @apply mt-10 mb-3 text-3xl text-forest-900;
+}
+.prose-gps h3 {
+  @apply mt-8 mb-2 text-2xl text-forest-900;
+}
+.prose-gps p {
+  @apply mb-4;
+}
+.prose-gps ul {
+  @apply mb-4 list-disc space-y-1 pl-6;
+}
+.prose-gps a {
+  @apply text-forest-600 underline underline-offset-4 hover:text-forest-900;
+}
+
+.field {
+  @apply w-full rounded-xl border border-sand-dark bg-white px-4 py-3 text-ink placeholder:text-stone/60 focus:border-forest-500 focus:outline-none focus:ring-2 focus:ring-forest-500/20;
+}
+.label {
+  @apply mb-1.5 block text-sm font-medium text-ink;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.rise {
+  animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.rise-1 { animation-delay: 0.08s; }
+.rise-2 { animation-delay: 0.18s; }
+.rise-3 { animation-delay: 0.28s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .rise { animation: none; }
+  html { scroll-behavior: auto; }
+}
