@@ -14,10 +14,12 @@ export function Portrait({ provider, className = '' }: { provider: Provider; cla
           // Headshot not uploaded yet: show a quiet placeholder instead of a broken image.
           const img = e.currentTarget
           img.style.display = 'none'
-          img.parentElement?.querySelector('[data-fallback]')?.classList.remove('hidden')
+          const fallback = img.parentElement?.querySelector('[data-fallback]')
+          fallback?.classList.remove('hidden')
+          fallback?.classList.add('flex')
         }}
       />
-      <div data-fallback className="absolute inset-0 hidden flex-col items-center justify-center gap-3 bg-gradient-to-br from-forest-100 to-sand text-forest-900/50">
+      <div data-fallback className="absolute inset-0 hidden flex-col items-center justify-center gap-3 bg-gradient-to-br from-forest-100 to-sand p-4 text-center text-forest-900/50">
         <User className="h-16 w-16" strokeWidth={1.2} aria-hidden="true" />
         <span className="text-xs font-medium uppercase tracking-[0.18em]">Photo coming soon</span>
       </div>
