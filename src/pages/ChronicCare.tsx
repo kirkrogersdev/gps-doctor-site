@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     q: 'What does it cost?',
-    a: 'Chronic Care Management is covered by Medicare Part B. After the Part B deductible, Medicare pays 80 percent and the patient is responsible for a 20 percent coinsurance, typically a small monthly amount. Medicare Supplement (Medigap) plans and Medicaid usually cover that coinsurance in full, so many patients pay nothing out of pocket. We will go over the exact cost for your coverage before you enroll.',
+    a: 'Chronic Care Management is covered by Medicare Part B. After the Part B deductible, Medicare pays 80 percent and the patient is responsible for a 20 percent coinsurance, roughly $13 per month at 2026 national rates. Medicare Supplement (Medigap) plans and Medicaid usually cover that coinsurance in full, so many patients pay nothing out of pocket. We will go over the exact cost for your coverage before you enroll.',
   },
   {
     q: 'Do I have to sign up?',

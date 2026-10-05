@@ -60,8 +60,10 @@ export default function Patients() {
               <Pill className="h-4 w-4" aria-hidden="true" /> Visit the Fullscript store <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
             </a>
             <p className="mt-4 max-w-md text-xs text-stone">
-              Fullscript is an independent company. Purchases are made on Fullscript's website under its terms and privacy policy.
-              Please talk with Dr. Tourk before starting any new supplement.
+              Fullscript is an independent online dispensary; purchases are made on its website under its terms and privacy policy. If you
+              buy through this link, the practice may receive a portion of the sale. You are under no obligation to buy supplements from
+              us, the same or equivalent products are available elsewhere, and your care will not be affected by your decision. Supplements
+              are not a substitute for prescribed treatment. Please talk with Dr. Tourk before starting any new supplement.
             </p>
           </div>
           <a href={site.fullscript.url} target="_blank" rel="noopener noreferrer" className="mx-auto block w-full max-w-xs rounded-[1.75rem] bg-white p-6 shadow-sm transition hover:shadow-xl hover:shadow-forest-900/10">
