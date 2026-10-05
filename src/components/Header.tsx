@@ -40,11 +40,11 @@ export default function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <a href={site.phoneHref} className="flex items-center gap-2 text-sm font-semibold text-forest-900 hover:text-forest-600">
+          <a href={site.phoneHref} className="hidden items-center gap-2 whitespace-nowrap text-sm font-semibold text-forest-900 hover:text-forest-600 xl:flex">
             <Phone className="h-4 w-4" aria-hidden="true" />
             {site.phone}
           </a>
-          <Link to="/pay" className="btn-primary !py-2.5">
+          <Link to="/pay" className="btn-primary whitespace-nowrap !py-2.5">
             Pay a Bill
           </Link>
         </div>
