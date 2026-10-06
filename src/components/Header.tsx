@@ -23,7 +23,7 @@ export default function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-3 sm:px-6 lg:px-8">
         <Logo />
 
-        <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-0.5 xl:flex" aria-label="Primary">
           {nav.map((item) => (
             <NavLink
               key={item.to}
@@ -39,7 +39,7 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden items-center gap-3 xl:flex">
           <a href={site.fullscript.url} target="_blank" rel="noopener noreferrer" className="btn-store whitespace-nowrap !py-2.5">
             <ShoppingBag className="h-4 w-4" aria-hidden="true" /> Our Store
           </a>
@@ -51,7 +51,7 @@ export default function Header() {
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="shrink-0 rounded-full p-2 text-forest-900 hover:bg-forest-100 lg:hidden"
+          className="shrink-0 rounded-full p-2 text-forest-900 hover:bg-forest-100 xl:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label={open ? 'Close menu' : 'Open menu'}
@@ -61,7 +61,7 @@ export default function Header() {
       </div>
 
       {open && (
-        <div id="mobile-nav" className="border-t border-forest-900/10 bg-cream lg:hidden">
+        <div id="mobile-nav" className="border-t border-forest-900/10 bg-cream xl:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4 sm:px-6" aria-label="Mobile">
             {nav.map((item) => (
               <NavLink
