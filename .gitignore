@@ -10,3 +10,4 @@ dist-ssr
 logs
 *.log
 *.tsbuildinfo
+public/_vine-preview.html

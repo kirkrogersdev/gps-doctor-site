@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
+import Vine from './components/Vine'
 import Home from './pages/Home'
 import About from './pages/About'
 import Services from './pages/Services'
@@ -21,6 +22,9 @@ export default function App() {
   return (
     <div className="flex min-h-screen flex-col">
       <ScrollToTop />
+      <div className="pointer-events-none fixed inset-y-0 right-0 -z-10 hidden w-52 xl:block" aria-hidden="true">
+        <Vine className="h-full w-full text-forest-900/[0.07]" />
+      </div>
       <a
         href="#main"
         className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-forest-900 focus:px-4 focus:py-2 focus:text-cream"

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, Phone, ShieldCheck, Home as HomeIcon, Building2, Video, HeartPulse, CalendarCheck, Stethoscope } from 'lucide-react'
-import { Section, SectionHeading, Botanical } from '../components/Section'
+import { Section, SectionHeading } from '../components/Section'
+import Vine from '../components/Vine'
 import { Portrait } from '../components/ProviderCard'
 import { site, providers } from '../lib/site'
 import { useTitle } from '../lib/useTitle'
@@ -38,8 +39,7 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <Botanical className="pointer-events-none absolute -left-24 top-10 h-[34rem] w-[34rem] text-forest-900/[0.05]" />
-        <Botanical className="pointer-events-none absolute -right-28 bottom-0 h-[30rem] w-[30rem] -scale-x-100 text-forest-900/[0.05]" />
+        <Vine flip className="pointer-events-none absolute -left-10 -top-6 hidden h-[120%] w-48 text-forest-900/[0.08] lg:block" />
         <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-4 pb-20 pt-16 sm:px-6 sm:pt-20 lg:grid-cols-12 lg:px-8 lg:pb-28">
           <div className="lg:col-span-7">
             <p className="eyebrow rise">{site.tagline}</p>
@@ -165,7 +165,7 @@ export default function Home() {
       {/* CCM promo */}
       <Section>
         <div className="relative overflow-hidden rounded-[2.5rem] bg-forest-900 px-8 py-14 text-cream sm:px-14">
-          <Botanical className="pointer-events-none absolute -right-16 -top-16 h-96 w-96 text-cream/[0.07]" />
+          <Vine className="pointer-events-none absolute -top-8 right-6 hidden h-[130%] w-40 text-cream/[0.12] md:block" />
           <div className="relative grid gap-10 lg:grid-cols-12 lg:items-center">
             <div className="lg:col-span-8">
               <p className="eyebrow !text-leaf">Medicare Chronic Care Management</p>
