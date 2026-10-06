@@ -30,7 +30,7 @@ export default function Header() {
               to={item.to}
               className={({ isActive }) =>
                 `whitespace-nowrap rounded-full px-3.5 py-2 text-sm font-medium transition-colors ${
-                  isActive ? 'bg-forest-900 text-cream' : 'text-ink/80 hover:bg-forest-100 hover:text-forest-900'
+                  isActive ? 'bg-forest-100 text-forest-900' : 'text-ink/80 hover:bg-forest-100/60 hover:text-forest-900'
                 }`
               }
             >
@@ -40,10 +40,10 @@ export default function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 xl:flex">
-          <a href={site.fullscript.url} target="_blank" rel="noopener noreferrer" className="btn-store whitespace-nowrap !py-2.5">
+          <a href={site.fullscript.url} target="_blank" rel="noopener noreferrer" className="btn-store whitespace-nowrap !px-5 !py-2.5">
             <ShoppingBag className="h-4 w-4" aria-hidden="true" /> Our Store
           </a>
-          <Link to="/pay" className="btn-primary whitespace-nowrap !py-2.5">
+          <Link to="/pay" className="btn-primary whitespace-nowrap !px-5 !py-2.5">
             Pay a Bill
           </Link>
         </div>
@@ -70,7 +70,7 @@ export default function Header() {
                 onClick={() => setOpen(false)}
                 className={({ isActive }) =>
                   `rounded-xl px-4 py-3 text-base font-medium ${
-                    isActive ? 'bg-forest-900 text-cream' : 'text-ink hover:bg-forest-100'
+                    isActive ? 'bg-forest-100 text-forest-900' : 'text-ink hover:bg-forest-100/60'
                   }`
                 }
               >
