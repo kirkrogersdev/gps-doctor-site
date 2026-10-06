@@ -1,3 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /logo-options
+Disallow: /brand/
 Sitemap: https://gps.doctor/sitemap.xml
