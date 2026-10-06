@@ -24,6 +24,9 @@
   --color-sand-dark: #d9d2bc;
   --color-ink: #1c1a17;
   --color-stone: #6b6a63;
+
+  --color-store: #1f3f73;
+  --color-store-hover: #2a5298;
 }
 
 html {
@@ -53,6 +56,9 @@ h1, h2, h3, .font-display {
 }
 .btn-light {
   @apply btn bg-cream text-forest-900 hover:bg-white;
+}
+.btn-store {
+  @apply btn bg-store text-white hover:bg-store-hover hover:shadow-lg hover:shadow-store/25;
 }
 .btn-ghost-light {
   @apply btn border border-cream/40 text-cream hover:bg-cream/10;

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
-import { Menu, X, Phone } from 'lucide-react'
+import { Menu, X, Phone, ShoppingBag } from 'lucide-react'
 import Logo from './Logo'
 import { nav, site } from '../lib/site'
 
@@ -40,9 +40,8 @@ export default function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <a href={site.phoneHref} className="hidden items-center gap-2 whitespace-nowrap text-sm font-semibold text-forest-900 hover:text-forest-600 xl:flex">
-            <Phone className="h-4 w-4" aria-hidden="true" />
-            {site.phone}
+          <a href={site.fullscript.url} target="_blank" rel="noopener noreferrer" className="btn-store whitespace-nowrap !py-2.5">
+            <ShoppingBag className="h-4 w-4" aria-hidden="true" /> Our Store
           </a>
           <Link to="/pay" className="btn-primary whitespace-nowrap !py-2.5">
             Pay a Bill
@@ -79,6 +78,9 @@ export default function Header() {
               </NavLink>
             ))}
             <div className="mt-3 flex flex-col gap-2 border-t border-forest-900/10 pt-4">
+              <a href={site.fullscript.url} target="_blank" rel="noopener noreferrer" className="btn-store">
+                <ShoppingBag className="h-4 w-4" aria-hidden="true" /> Our Store
+              </a>
               <a href={site.phoneHref} className="btn-secondary">
                 <Phone className="h-4 w-4" aria-hidden="true" /> Call {site.phone}
               </a>
