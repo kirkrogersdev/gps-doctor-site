@@ -34,12 +34,12 @@ export default function LogoOptions() {
             </div>
 
             <div className="mt-8 grid gap-8 lg:grid-cols-5">
-              <div className="rounded-[1.5rem] bg-cream p-6 lg:col-span-2">
+              <div className="rounded-[1.5rem] bg-[#fcf9f3] p-6 lg:col-span-2">
                 <img src={`/brand/${o.slug}-no-domain.png`} alt={`${o.name} logo`} className="mx-auto w-full max-w-sm" loading="lazy" />
               </div>
               <div className="space-y-4 lg:col-span-3">
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-stone">In the website header</p>
-                <div className="overflow-hidden rounded-[1.5rem] border border-forest-900/10 bg-cream">
+                <div className="overflow-hidden rounded-[1.5rem] border border-forest-900/10 bg-[#fcf9f3]">
                   <div className="flex items-center justify-between gap-6 px-5 py-3">
                     <img src={`/brand/${o.slug}-navbar-trimmed.png`} alt="" className="h-9 w-auto sm:h-11" loading="lazy" />
                     <div className="hidden items-center gap-4 text-sm text-ink/80 md:flex">
@@ -52,7 +52,7 @@ export default function LogoOptions() {
                   </div>
                 </div>
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-stone">Phone header</p>
-                <div className="max-w-xs overflow-hidden rounded-[1.5rem] border border-forest-900/10 bg-cream">
+                <div className="max-w-xs overflow-hidden rounded-[1.5rem] border border-forest-900/10 bg-[#fcf9f3]">
                   <div className="flex items-center justify-between px-4 py-3">
                     <img src={`/brand/${o.slug}-navbar-trimmed.png`} alt="" className="h-7 w-auto" loading="lazy" />
                     <span className="flex flex-col gap-1" aria-hidden="true"><i className="block h-0.5 w-5 bg-forest-900" /><i className="block h-0.5 w-5 bg-forest-900" /><i className="block h-0.5 w-5 bg-forest-900" /></span>
