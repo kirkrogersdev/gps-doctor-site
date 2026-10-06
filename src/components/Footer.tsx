@@ -79,7 +79,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 flex flex-col gap-4 border-t border-cream/15 pt-8 text-xs text-cream/60 md:flex-row md:items-center md:justify-between">
-          <p>© {new Date().getFullYear()} {site.legalName}. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} {site.legalName} All rights reserved.</p>
           <ul className="flex flex-wrap gap-x-5 gap-y-2">
             <li><Link to="/privacy" className="hover:text-cream">Privacy Policy</Link></li>
             <li><Link to="/notice-of-privacy-practices" className="hover:text-cream">Notice of Privacy Practices</Link></li>

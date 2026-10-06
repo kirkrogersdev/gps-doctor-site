@@ -52,7 +52,7 @@ export default function Header() {
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="rounded-full p-2 text-forest-900 hover:bg-forest-100 lg:hidden"
+          className="shrink-0 rounded-full p-2 text-forest-900 hover:bg-forest-100 lg:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label={open ? 'Close menu' : 'Open menu'}

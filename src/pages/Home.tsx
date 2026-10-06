@@ -165,7 +165,6 @@ export default function Home() {
       {/* CCM promo */}
       <Section>
         <div className="relative overflow-hidden rounded-[2.5rem] bg-forest-900 px-8 py-14 text-cream sm:px-14">
-          <Vine className="pointer-events-none absolute -top-8 right-6 hidden h-[130%] w-40 text-cream/[0.12] md:block" />
           <div className="relative grid gap-10 lg:grid-cols-12 lg:items-center">
             <div className="lg:col-span-8">
               <p className="eyebrow !text-leaf">Medicare Chronic Care Management</p>

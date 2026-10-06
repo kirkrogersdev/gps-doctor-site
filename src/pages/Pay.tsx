@@ -54,7 +54,7 @@ export default function Pay() {
               <p className="mt-6 text-xs text-stone">
                 By making a payment you agree to our <Link to="/terms" className="underline underline-offset-4">Terms of Use</Link> and{' '}
                 <Link to="/refund-policy" className="underline underline-offset-4">Refund &amp; Cancellation Policy</Link>.
-                Payments are processed by Stripe, Inc. on behalf of {site.legalName}. The charge will appear on your statement as{' '}
+                Payments are processed by Stripe, Inc. on behalf of {site.legalName} The charge will appear on your statement as{' '}
                 <span className="font-semibold">GPS DOCTOR</span> or <span className="font-semibold">GERIATRIC PROFESSIONAL</span>.
               </p>
             </div>
