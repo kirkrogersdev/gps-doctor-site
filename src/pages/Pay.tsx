@@ -66,8 +66,7 @@ export default function Pay() {
               <h3 className="mt-4 text-2xl text-cream">Prefer to pay by phone?</h3>
               <p className="mt-2 text-cream/75">Call the office during business hours and we will take your payment securely.</p>
               <a href={site.phoneHref} className="btn-light mt-6">{site.phone}</a>
-              <p className="mt-4 text-xs text-cream/60">{site.hours}</p>
-            </div>
+                          </div>
             <div id="billing" className="rounded-[2rem] border border-forest-900/10 bg-white p-8">
               <Receipt className="h-6 w-6 text-forest-500" aria-hidden="true" />
               <h3 className="mt-4 text-2xl text-forest-900">Questions about your statement?</h3>

@@ -2,8 +2,8 @@
 
 ## Needed from Dr. Tourk / Katelyn
 - [ ] **Headshots** for Dr. Tourk and Amanda Jenkins (the rack card photos work). Save as `public/team/karim-tourk.jpg` and `public/team/amanda-jenkins.jpg` (4:5 portrait, ≥1200px wide). The site shows a quiet "photo coming soon" placeholder until then.
-- [ ] Confirm the public **email** for the practice (`Tourk@gps.doctor` is used today).
-- [ ] Confirm **office address** (109 N 129th Infantry Dr, Joliet, IL 60435 from the state business record) and **hours**.
+- [ ] Email removed from the site at Dr. Tourk's request.
+- [ ] Office address confirmed by Dr. Tourk on Oct 5: 1755 Park St, Suite 200, Naperville, IL 60563. No hours or email shown publicly at his request; billing line 630-299-8700.
 - [ ] Confirm **Amanda's title** as she wants it displayed ("APN" per rack card).
 - [ ] **DNS**: point `gps.doctor` at Vercel (A `76.76.21.21` for apex, CNAME `cname.vercel-dns.com` for `www`) and remove the Squarespace parking page.
 - [ ] **CCM form delivery**: Katelyn to provide the SparroWell consent-console intake endpoint + token (`SPARROWELL_INTAKE_URL`, `SPARROWELL_INTAKE_TOKEN`), and/or a team inbox for `CCM_TEAM_EMAIL` (with a Resend API key for `RESEND_API_KEY`).

@@ -8,7 +8,7 @@ export default function Patients() {
   useTitle('For Patients', 'Patient resources for Geriatric Professional Services: pay your bill online, billing support, the Fullscript supplement store and Chronic Care Management enrollment.')
   const tiles = [
     { icon: CreditCard, title: 'Pay a bill', text: 'Secure online payment by credit card or bank account (eCheck).', to: '/pay', cta: 'Go to payments' },
-    { icon: Receipt, title: 'Billing support', text: 'Questions about a statement, insurance or a payment plan? Our billing team can help.', to: site.billingSupportUrl, cta: 'Get billing help' },
+    { icon: Receipt, title: 'Billing support', text: `Questions about a statement, insurance or a payment plan? Call the billing department at ${site.billingPhone}.`, to: site.billingSupportUrl, cta: 'Get billing help' },
     { icon: HeartPulse, title: 'Chronic Care Management', text: 'Learn about the program, check eligibility and ask the CCM team to call you.', to: '/chronic-care-management', cta: 'About CCM' },
     { icon: FileText, title: 'Privacy & your rights', text: 'How we protect your health information, and your rights under HIPAA.', to: '/notice-of-privacy-practices', cta: 'Read the notice' },
   ]
@@ -17,7 +17,7 @@ export default function Patients() {
       <PageHero
         eyebrow="For patients & families"
         title="Everything you need, in one place"
-        lede="Payments, billing help, supplements and program information. If you cannot find what you are looking for, call us and a real person will help."
+        lede="Payments, billing help, supplements and program information."
       >
         <a href={site.phoneHref} className="btn-primary"><Phone className="h-4 w-4" aria-hidden="true" /> {site.phone}</a>
       </PageHero>

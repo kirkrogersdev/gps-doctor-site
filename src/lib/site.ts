@@ -13,15 +13,15 @@ export const site = {
 
   phone: '800-353-4980',
   phoneHref: 'tel:+18003534980',
-  email: 'Tourk@gps.doctor', // CONFIRM: public-facing inbox for the practice
+  billingPhone: '630-299-8700',
+  billingPhoneHref: 'tel:+16302998700',
   address: {
-    street: '109 N 129th Infantry Dr', // CONFIRM
-    city: 'Joliet',
+    street: '1755 Park St, Suite 200',
+    city: 'Naperville',
     state: 'IL',
-    zip: '60435',
+    zip: '60563',
   },
-  serviceArea: 'Joliet, Will County and the southwest Chicago suburbs',
-  hours: 'Monday to Friday, 9:00 AM to 5:00 PM', // CONFIRM
+  serviceArea: 'Illinois',
 
   abim: {
     badgeUrl: 'https://badges.abim.org/b28472b8-5773-42ee-b207-bc4fd039bb27#acc.M9uoSmW3',
@@ -48,14 +48,14 @@ export const providers = [
     role: 'Physician, Internal Medicine & Geriatrics',
     pronunciation: 'Tourk rhymes with "work"',
     credentials: [
-      'Board Certified, American Board of Internal Medicine',
+      'Three-time Board Certified, American Board of Internal Medicine',
       'Member, American Geriatrics Society',
       'University of Chicago alumnus',
       'Internal Medicine, University of Illinois at Chicago',
       'Clinical Instructor, US Department of Veterans Affairs',
     ],
     bio: [
-      'For over twenty years, Dr. Tourk has been actively involved in the management and treatment of complex geriatric patients across Joliet and the surrounding communities.',
+      'For thirty years, Dr. Tourk has been actively involved in the management and treatment of complex geriatric patients across Illinois.',
       'Combining a unique blend of academic integrity, thoughtful oversight, and attention to detail, Dr. Tourk strives for the best possible outcomes while maintaining a humanistic touch.',
     ],
     photo: '/team/karim-tourk.jpg', // drop headshot here

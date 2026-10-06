@@ -55,7 +55,7 @@ export default function Terms() {
       <p>We may update these terms from time to time. The effective date above reflects the latest revision.</p>
       <h2>Contact</h2>
       <p>
-        {site.legalName} · {site.phone} · <a href={`mailto:${site.email}`}>{site.email}</a>
+        {site.legalName} · {site.phone} · {site.address.street}, {site.address.city}, {site.address.state} {site.address.zip}
       </p>
     </LegalPage>
   )

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Home, Building2, Video, HeartPulse, Pill, ClipboardList, Users, ArrowRight } from 'lucide-react'
+import { Building2, Brain, HeartPulse, Pill, ClipboardList, Users, ArrowRight } from 'lucide-react'
 import { PageHero, Section, SectionHeading } from '../components/Section'
 import { site } from '../lib/site'
 import { useTitle } from '../lib/useTitle'
@@ -7,18 +7,13 @@ import { useTitle } from '../lib/useTitle'
 const services = [
   {
     icon: Building2,
-    title: 'Assisted living & long-term care rounds',
-    text: 'Dr. Tourk and Amanda see patients where they live. We round regularly in assisted living and skilled nursing communities and coordinate directly with your nursing staff so changes are caught early.',
+    title: 'Assisted living, skilled nursing & long-term care rounds',
+    text: 'Dr. Tourk and Amanda see patients where they live. We round regularly in assisted living, skilled nursing and long-term care communities and coordinate directly with your nursing staff so changes are caught early.',
   },
   {
-    icon: Home,
-    title: 'House calls',
-    text: 'For patients who find it difficult to travel, we bring primary care to the home: exams, medication review, lab orders and follow-up, all without the waiting room.',
-  },
-  {
-    icon: Video,
-    title: 'Telehealth visits',
-    text: 'Secure video visits for follow-ups, medication questions and check-ins. Family members are welcome to join from wherever they are.',
+    icon: Brain,
+    title: 'Memory care',
+    text: 'Consistent, specialized medical care for residents living with dementia and other cognitive conditions, in partnership with memory care staff and families.',
   },
   {
     icon: HeartPulse,
@@ -44,13 +39,13 @@ const services = [
 ]
 
 export default function Services() {
-  useTitle('Services', 'Concierge geriatric and internal medicine services in Joliet, IL: assisted living rounds, house calls, telehealth, Chronic Care Management, medication management and care planning.')
+  useTitle('Services', 'Concierge geriatric medical services in Illinois: assisted living, memory care, skilled nursing and long-term care rounds, Chronic Care Management, medication management and care planning.')
   return (
     <>
       <PageHero
         eyebrow="Services"
         title="Specialized, quality concierge care for older adults"
-        lede="Internal medicine and geriatrics delivered the way it should be: unhurried, coordinated and brought to wherever you call home."
+        lede="Internal medicine and geriatrics delivered the way it should be: unhurried, coordinated and brought to the community you call home."
       >
         <div className="flex flex-wrap gap-3">
           <a href={site.phoneHref} className="btn-primary">Call {site.phone}</a>
@@ -81,10 +76,10 @@ export default function Services() {
         <SectionHeading
           eyebrow="Insurance & payment"
           title="Most insurances accepted. Are you covered?"
-          lede="We accept Medicare and most major insurance plans. Call the office and we will confirm your coverage before your first visit. For patients and families, we also offer secure online bill payment."
+          lede={`We accept Medicare and most major insurance plans. Call the billing office at ${site.billingPhone} with questions and to confirm coverage. For patients and families, we also offer secure online bill payment.`}
         />
         <div className="mt-8 flex flex-wrap gap-3">
-          <a href={site.phoneHref} className="btn-primary">Check my coverage: {site.phone}</a>
+          <a href={site.billingPhoneHref} className="btn-primary">Check my coverage: {site.billingPhone}</a>
           <Link to="/pay" className="btn-secondary">Pay a bill online</Link>
         </div>
       </Section>

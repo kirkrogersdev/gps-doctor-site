@@ -39,7 +39,7 @@ export default function Nondiscrimination() {
       <h2>Filing a grievance</h2>
       <p>
         If you believe we have failed to provide these services or discriminated in another way, you can file a grievance with our Section
-        1557 Coordinator at {site.phone}, <a href={`mailto:${site.email}`}>{site.email}</a>, or {site.address.street}, {site.address.city},{' '}
+        1557 Coordinator at {site.phone}, or by mail at {site.address.street}, {site.address.city},{' '}
         {site.address.state} {site.address.zip}. You can file in person, by mail, phone or email, and we can help you.
       </p>
       <p>

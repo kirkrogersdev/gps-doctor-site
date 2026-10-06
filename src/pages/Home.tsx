@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, Phone, ShieldCheck, Home as HomeIcon, Building2, Video, HeartPulse, CalendarCheck, Stethoscope } from 'lucide-react'
+import { ArrowRight, Phone, ShieldCheck, Building2, Brain, BedDouble, HeartPulse, CalendarCheck, Stethoscope, Pill, ExternalLink } from 'lucide-react'
 import { Section, SectionHeading } from '../components/Section'
 import Vine from '../components/Vine'
 import { Portrait } from '../components/ProviderCard'
@@ -7,9 +7,9 @@ import { site, providers } from '../lib/site'
 import { useTitle } from '../lib/useTitle'
 
 const careSettings = [
-  { icon: HomeIcon, title: 'At home', text: 'House calls for patients who find it hard to travel to an office.' },
-  { icon: Building2, title: 'Assisted living & long-term care', text: 'Regular rounds in your community, coordinated with your nursing staff.' },
-  { icon: Video, title: 'Telehealth', text: 'Video visits for follow-ups, medication questions and check-ins.' },
+  { icon: Building2, title: 'Assisted living', text: 'Regular rounds in your community, coordinated with your nursing staff.' },
+  { icon: Brain, title: 'Memory care', text: 'Specialized, consistent care for residents living with dementia and cognitive decline.' },
+  { icon: BedDouble, title: 'Skilled nursing & long-term care', text: 'Attending physician and nurse practitioner coverage in nursing facilities.' },
 ]
 
 const pillars = [
@@ -47,8 +47,10 @@ export default function Home() {
               Concierge geriatric care that <em className="font-medium italic text-forest-500">comes to you.</em>
             </h1>
             <p className="rise rise-2 mt-7 max-w-xl text-xl leading-relaxed text-ink/75">
-              Board-certified internal medicine and geriatrics from Dr. Karim Tourk and Nurse Practitioner Amanda Jenkins,
-              delivered at home, in assisted living and by telehealth across {site.serviceArea}.
+              Concierge Geriatric Medical Care delivered by three-time Board Certified Internal Medicine physician Dr. Karim Tourk
+              and Board Certified Nurse Practitioner Amanda Jenkins. With 40 years of combined practice experience, GPS is the premier
+              practice in delivering quality care in Assisted Living and Memory Care communities as well as Skilled Nursing and Long
+              Term Care facilities.
             </p>
             <div className="rise rise-3 mt-9 flex flex-wrap items-center gap-3">
               <a href={site.phoneHref} className="btn-primary">
@@ -79,8 +81,8 @@ export default function Home() {
                 <Portrait provider={jenkins} className="aspect-square border-4 border-cream shadow-xl shadow-forest-900/20" />
               </div>
               <div className="absolute -right-4 top-6 rounded-2xl bg-forest-900 px-4 py-3 text-cream shadow-lg">
-                <p className="font-display text-3xl font-semibold leading-none">20+</p>
-                <p className="mt-1 text-[0.7rem] uppercase tracking-[0.16em] text-cream/70">years in geriatrics</p>
+                <p className="font-display text-3xl font-semibold leading-none">40+</p>
+                <p className="mt-1 text-[0.7rem] uppercase tracking-[0.16em] text-cream/70">years combined experience</p>
               </div>
             </div>
             <p className="mt-10 text-center text-sm text-stone sm:mt-12">
@@ -111,8 +113,8 @@ export default function Home() {
       <Section>
         <SectionHeading
           eyebrow="How we care for you"
-          title="A small practice built around the needs of older adults"
-          lede="Dr. Tourk and Amanda have spent their careers caring for patients in assisted living, long-term care and at home. We know the questions families ask, and we make it easy to reach us."
+          title="An exceptional private practice built around the needs of older adults"
+          lede="Over 40 years of combined practice experience caring for patients in assisted living, memory care and long-term care. We know the questions families ask, and we make it easy to reach us."
         />
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {pillars.map(({ icon: Icon, title, text, to }) => (
@@ -138,10 +140,10 @@ export default function Home() {
           <div>
             <SectionHeading
               eyebrow="Meet your care team"
-              title={<>Two clinicians. One phone number. <span className="text-forest-500">Decades of experience.</span></>}
+              title={<>Two clinicians. <span className="text-forest-500">Decades of experience.</span></>}
               lede={
                 <>
-                  For over twenty years, Dr. Tourk has managed the care of complex geriatric patients. Amanda Jenkins, a board-certified
+                  For thirty years, Dr. Tourk has managed the care of complex geriatric patients. Amanda Jenkins, a board-certified
                   nurse practitioner and lifelong area resident, brings more than fifteen years in long-term care. Together they bring
                   compassionate concierge healthcare directly to you.
                 </>
@@ -188,6 +190,29 @@ export default function Home() {
         </div>
       </Section>
 
+      {/* Supplement store */}
+      <Section tone="sand" className="!py-16">
+        <div className="grid items-center gap-10 lg:grid-cols-12">
+          <div className="lg:col-span-8">
+            <p className="eyebrow">Supplement store</p>
+            <h2 className="mt-3 text-4xl leading-tight text-forest-900">Professional-grade supplements, recommended by your doctor</h2>
+            <p className="mt-4 max-w-2xl text-lg text-ink/75">
+              Dr. Tourk's online dispensary is hosted by Fullscript. Order the exact products and doses he recommends, shipped directly to you.
+            </p>
+            <a href={site.fullscript.url} target="_blank" rel="noopener noreferrer" className="btn-primary mt-6">
+              <Pill className="h-4 w-4" aria-hidden="true" /> Visit the Fullscript store <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
+            </a>
+            <p className="mt-4 max-w-xl text-xs text-stone">
+              Fullscript is an independent online dispensary. The practice may receive a portion of sales made through this link. You are under no
+              obligation to buy, and your care will not be affected by your decision. Please talk with Dr. Tourk before starting any new supplement.
+            </p>
+          </div>
+          <a href={site.fullscript.url} target="_blank" rel="noopener noreferrer" className="mx-auto block w-full max-w-[220px] rounded-[1.75rem] bg-white p-5 shadow-sm transition hover:shadow-xl hover:shadow-forest-900/10 lg:col-span-4">
+            <img src={site.fullscript.buttonImg} alt="Order supplements through my Fullscript store." className="w-full" loading="lazy" />
+          </a>
+        </div>
+      </Section>
+
       {/* Quick links */}
       <Section className="!pt-0">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -195,7 +220,7 @@ export default function Home() {
             { to: '/pay', title: 'Pay a bill', text: 'Secure online payment by card or bank account.' },
             { to: '/contact#billing', title: 'Billing questions', text: 'Statements, insurance and payment plans.' },
             { to: '/patients#supplements', title: 'Supplement store', text: 'Professional-grade supplements via Fullscript.' },
-            { to: '/contact', title: 'Contact the office', text: `Call ${site.phone} or send us a note.` },
+            { to: '/contact', title: 'Contact the office', text: `Call ${site.phone} to reach the care team.` },
           ].map((l) => (
             <Link key={l.to} to={l.to} className="group rounded-2xl border border-forest-900/10 p-6 transition hover:border-forest-900 hover:bg-forest-50">
               <h3 className="flex items-center justify-between text-xl text-forest-900">

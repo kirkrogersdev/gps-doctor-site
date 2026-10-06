@@ -47,8 +47,7 @@ export default function Privacy() {
       <p>This site is intended for adults and we do not knowingly collect information from children under 13.</p>
       <h2>Your choices</h2>
       <p>
-        To ask what information we hold about you from this website, or to have it deleted, contact {site.phone} or{' '}
-        <a href={`mailto:${site.email}`}>{site.email}</a>.
+        To ask what information we hold about you from this website, or to have it deleted, call {site.phone}.
       </p>
       <h2>Changes</h2>
       <p>We may update this policy from time to time; the effective date above reflects the most recent version.</p>

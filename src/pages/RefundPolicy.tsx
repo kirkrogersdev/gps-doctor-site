@@ -18,12 +18,12 @@ export default function RefundPolicy() {
       <p>
         If you overpay, pay the same balance twice, or your insurer later pays an amount you have already paid, we will refund the
         difference to your original payment method within 30 days of identifying the credit. Fees for services already rendered are
-        otherwise non-refundable. If you believe a charge is in error, contact our billing team at {site.phone} or{' '}
-        <a href={`mailto:${site.email}`}>{site.email}</a> within 60 days of the statement date and we will review it with you.
+        otherwise non-refundable. If you believe a charge is in error, call our billing department at {site.billingPhone} within 60 days of the
+        statement date and we will review it with you.
       </p>
       <h2>Appointment cancellations</h2>
       <p>
-        Please give at least 24 hours' notice to cancel or reschedule a scheduled home or telehealth visit by calling {site.phone} or
+        Please give at least 24 hours' notice to cancel or reschedule a scheduled visit by calling {site.phone} or
         telling your community nurse. We do not currently charge a late-cancellation or no-show fee.
       </p>
       <h2>Chronic Care Management</h2>
@@ -40,7 +40,7 @@ export default function RefundPolicy() {
       </p>
       <h2>Questions and disputes</h2>
       <p>
-        Please contact us first. Most billing questions are resolved in a single call to {site.phone}. See also our{' '}
+        Please contact us first. Most billing questions are resolved in a single call to the billing department at {site.billingPhone}. See also our{' '}
         <Link to="/terms">Terms of Use</Link> and <Link to="/privacy">Privacy Policy</Link>.
       </p>
     </LegalPage>

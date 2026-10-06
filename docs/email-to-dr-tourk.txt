@@ -1,0 +1,49 @@
+To: Tourk@gps.doctor
+Subject: gps.doctor is live: preview link and DNS steps
+
+Hey Dr. T,
+
+The site is built and live. Take a look here:
+
+https://gps-doctor.silicondev.tech
+
+That's a preview address on our end. Once the DNS change below goes through, the same site will be served at gps.doctor and the "under construction" page goes away, which is what Stripe needs to see.
+
+WHAT'S ON THE SITE
+- Home, Our Team (your ABIM badge links straight to the verification page), Services, Chronic Care Management, For Patients, Pay a Bill, Contact
+- CCM contact form that asks for a preferred contact method with a confirmation field, so the team can call or email back
+- Fullscript store link using the code you sent
+- Billing support section and a Pay a Bill page that explains payments are processed by Stripe. The actual pay button turns on the moment Stripe approves you and gives us a payment link
+- The policy pages Stripe looks for: Privacy Policy, Terms, Refund & Cancellation Policy, HIPAA Notice of Privacy Practices, Accessibility, and a Nondiscrimination notice
+- Copy and branding pulled from your rack card, and it works on phones as well as desktops
+
+DNS RECORDS TO UPDATE
+Your domain's DNS is managed at Squarespace (nsd1-4.squarespacedns.com), so log in to Squarespace, open Domains > gps.doctor > DNS Settings, and make these changes:
+
+1. Delete the four existing A records for @ (the host "@" or blank) that point to 198.49.23.144, 198.49.23.145, 198.185.159.144 and 198.185.159.145.
+
+2. Add one new A record:
+   Host: @
+   Type: A
+   Value: 76.76.21.21
+
+3. Edit the www record so it points to Vercel instead of Squarespace:
+   Host: www
+   Type: CNAME
+   Value: cname.vercel-dns.com
+   (It currently points to ext-sq.squarespace.com. Change the value, don't add a second one.)
+
+4. Leave everything else exactly as it is. In particular, do NOT touch the MX record (smtp.google.com) or the TXT record that starts with "v=spf1". Those are what make your @gps.doctor email work.
+
+Once you save, the change usually takes 10 to 30 minutes, occasionally up to a few hours. Vercel checks automatically and issues the SSL certificate, so https://gps.doctor will just start working. If you'd rather, send me a Squarespace login or add me as a contributor and I'll make the change for you.
+
+A FEW THINGS I NEED FROM YOU
+1. Headshots. The site has placeholders for you and Amanda. The photos on the rack card would work great if you have the originals; otherwise any recent photo is fine.
+2. Logo. The rack card uses the practice name in that classic serif with the leaf ornament, so I carried that over and added a simple leaf mark next to the name as a stand-in. As soon as you have a logo file, send it over and we'll be happy to swap it in. If you don't have one, we can keep the mark or design one properly, your call.
+3. Confirm the contact details I used: phone 800-353-4980, email Tourk@gps.doctor, address 109 N 129th Infantry Dr, Joliet, IL 60435, and hours Monday to Friday, 9 to 5. Tell me anything that should change.
+4. When Stripe approves the account, send me the payment link they give you and I'll switch the Pay a Bill button on the same day.
+
+Please read through everything with a critical eye. If any wording, page or policy needs adjusting, or there's something you'd like added or removed, just tell me and we'll take care of it. Nothing is set in stone.
+
+Thanks,
+Kirk

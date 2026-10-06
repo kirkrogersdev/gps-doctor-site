@@ -29,7 +29,7 @@ export default function Accessibility() {
       </p>
       <h2>Feedback</h2>
       <p>
-        Please tell us if you encounter accessibility barriers on {site.domain}: {site.phone} or <a href={`mailto:${site.email}`}>{site.email}</a>.
+        Please tell us if you encounter accessibility barriers on {site.domain} by calling {site.phone}.
         We try to respond within five business days.
       </p>
     </LegalPage>

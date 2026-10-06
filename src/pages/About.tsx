@@ -6,13 +6,13 @@ import { providers, site } from '../lib/site'
 import { useTitle } from '../lib/useTitle'
 
 export default function About() {
-  useTitle('Our Team', 'Meet Dr. Karim Tourk, MD, board-certified internist and geriatrician, and Amanda Jenkins, APN, board-certified nurse practitioner, at Geriatric Professional Services in Joliet, IL.')
+  useTitle('Our Team', 'Meet Dr. Karim Tourk, MD, board-certified internist and geriatrician, and Amanda Jenkins, APN, board-certified nurse practitioner, at Geriatric Professional Services in Illinois.')
   return (
     <>
       <PageHero
         eyebrow="Our team"
         title="University trained. Nationally certified. Community focused."
-        lede="Geriatric Professional Services is a physician-led practice in Joliet, Illinois dedicated to the care of older adults. You will always see the same two clinicians, and they will always know your story."
+        lede="Geriatric Professional Services is an exclusive concierge medical practice in Illinois dedicated to the community-based care of older adults in Assisted Living, Memory Care and Nursing Facilities."
       />
 
       <Section>
@@ -57,7 +57,7 @@ export default function About() {
         />
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {[
-            ['We come to you', 'Visits at home, in assisted living and long-term care communities, and by telehealth when appropriate.'],
+            ['We come to you', 'Visits in assisted living, memory care and long-term care communities, and by telehealth when appropriate.'],
             ['We coordinate', 'We work alongside your community nurses, pharmacists, specialists and family so that everyone is reading from the same plan.'],
             ['We stay in touch', 'Between visits, our Chronic Care Management team keeps an eye on your care plan and is a phone call away.'],
           ].map(([t, d]) => (

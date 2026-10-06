@@ -49,7 +49,7 @@ export default function NoticeOfPrivacyPractices() {
         We will not retaliate against you for filing a complaint.
       </p>
       <h2>Contact</h2>
-      <p>Privacy Officer, {site.legalName} · {site.phone} · <a href={`mailto:${site.email}`}>{site.email}</a></p>
+      <p>Privacy Officer, {site.legalName} · {site.phone}</p>
     </LegalPage>
   )
 }

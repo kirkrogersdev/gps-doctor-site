@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Phone, Mail, MapPin, Clock, ShieldCheck } from 'lucide-react'
+import { Phone, Receipt, MapPin, ShieldCheck } from 'lucide-react'
 import Logo from './Logo'
 import { site, nav } from '../lib/site'
 
@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="lg:col-span-5">
             <Logo light />
             <p className="mt-5 max-w-md text-cream/75">
-              {site.tagline} Concierge geriatric and internal medicine care for older adults in {site.serviceArea}.
+              {site.tagline}
             </p>
             <a
               href={site.abim.badgeUrl}
@@ -53,8 +53,8 @@ export default function Footer() {
                 <a href={site.phoneHref} className="hover:text-leaf">{site.phone}</a>
               </li>
               <li className="flex items-start gap-3">
-                <Mail className="mt-0.5 h-4 w-4 shrink-0 text-leaf" aria-hidden="true" />
-                <a href={`mailto:${site.email}`} className="hover:text-leaf">{site.email}</a>
+                <Receipt className="mt-0.5 h-4 w-4 shrink-0 text-leaf" aria-hidden="true" />
+                <a href={site.billingPhoneHref} className="hover:text-leaf">Billing: {site.billingPhone}</a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-leaf" aria-hidden="true" />
@@ -63,10 +63,6 @@ export default function Footer() {
                   <br />
                   {site.address.city}, {site.address.state} {site.address.zip}
                 </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <Clock className="mt-0.5 h-4 w-4 shrink-0 text-leaf" aria-hidden="true" />
-                <span>{site.hours}</span>
               </li>
             </ul>
           </div>
