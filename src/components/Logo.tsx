@@ -1,27 +1,23 @@
 import { Link } from 'react-router-dom'
 
-export function LogoMark({ className = 'h-10 w-10' }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 64 64" className={className} aria-hidden="true">
-      <rect width="64" height="64" rx="14" className="fill-forest-900" />
-      <path d="M32 14c-6 9-14 13-14 22a14 14 0 0 0 28 0c0-9-8-13-14-22z" className="fill-leaf" />
-      <path d="M32 22v24M26 34h12" className="stroke-cream" strokeWidth="3.5" strokeLinecap="round" fill="none" />
-    </svg>
-  )
-}
+/**
+ * Practice logo (option 1, olive branch). Dr. Tourk is still choosing between the
+ * concepts on /logo-options; swap the two image paths here once he decides.
+ */
+const LOGO = '/brand/transparent/01-olive-branch-navbar.png'
+const LOGO_CREAM = '/brand/transparent/01-olive-branch-navbar-cream.png'
 
 export default function Logo({ light = false }: { light?: boolean }) {
   return (
-    <Link to="/" className="group flex shrink-0 items-center gap-3" aria-label="Geriatric Professional Services, home">
-      <LogoMark className="h-10 w-10 transition-transform duration-300 group-hover:-rotate-6" />
-      <span className="leading-tight">
-        <span className={`font-display block text-base sm:whitespace-nowrap font-semibold tracking-wide sm:text-lg xl:text-[1.35rem] ${light ? 'text-cream' : 'text-forest-900'}`}>
-          Geriatric Professional Services
-        </span>
-        <span className={`hidden whitespace-nowrap text-[0.68rem] font-medium uppercase tracking-[0.2em] sm:block ${light ? 'text-cream/70' : 'text-stone'}`}>
-          Dr. Karim Tourk, MD · gps.doctor
-        </span>
-      </span>
+    <Link to="/" className="flex shrink-0 items-center" aria-label="Geriatric Professional Services, home">
+      <img
+        src={light ? LOGO_CREAM : LOGO}
+        alt="Geriatric Professional Services"
+        className="h-8 w-auto sm:h-9 xl:h-10"
+        width={1648}
+        height={196}
+        decoding="async"
+      />
     </Link>
   )
 }
