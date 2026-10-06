@@ -17,28 +17,31 @@ export default function Contact() {
       </PageHero>
 
       <Section>
-        <div className="grid gap-8 lg:grid-cols-12">
-          <div className="space-y-6 lg:col-span-7">
-            <div className="grid gap-6 sm:grid-cols-3">
-              {[
-                { icon: Phone, label: 'Phone', value: site.phone, href: site.phoneHref },
-                { icon: Receipt, label: 'Billing department', value: site.billingPhone, href: site.billingPhoneHref },
-                { icon: MapPin, label: 'Office', value: `${site.address.street}\n${site.address.city}, ${site.address.state} ${site.address.zip}` },
-              ].map(({ icon: Icon, label, value, href }: { icon: typeof Phone; label: string; value: string; href?: string }) => (
-                <div key={label} className="rounded-[1.75rem] border border-forest-900/10 bg-white p-6">
-                  <Icon className="h-5 w-5 text-forest-500" aria-hidden="true" />
-                  <p className="eyebrow mt-4">{label}</p>
-                  {href ? (
-                    <a href={href} target={href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer" className="mt-1 block text-lg font-medium text-forest-900 hover:text-forest-600">
-                      {value}
-                    </a>
-                  ) : (
-                    <p className="mt-1 whitespace-pre-line text-lg font-medium text-forest-900">{value}</p>
-                  )}
-                </div>
-              ))}
-            </div>
+        <div className="space-y-6">
+          {/* Row 1: the three ways to reach us */}
+          <div className="grid gap-6 sm:grid-cols-3">
+            {[
+              { icon: Phone, label: 'Phone', value: site.phone, href: site.phoneHref, note: 'Care team and scheduling' },
+              { icon: Receipt, label: 'Billing department', value: site.billingPhone, href: site.billingPhoneHref, note: 'Statements, insurance, payment plans' },
+              { icon: MapPin, label: 'Office', value: `${site.address.street}\n${site.address.city}, ${site.address.state} ${site.address.zip}`, note: 'Correspondence and billing only' },
+            ].map(({ icon: Icon, label, value, href, note }: { icon: typeof Phone; label: string; value: string; href?: string; note: string }) => (
+              <div key={label} className="rounded-[1.75rem] border border-forest-900/10 bg-white p-7">
+                <Icon className="h-5 w-5 text-forest-500" aria-hidden="true" />
+                <p className="eyebrow mt-4">{label}</p>
+                {href ? (
+                  <a href={href} className="mt-1 block text-2xl font-medium text-forest-900 hover:text-forest-600">
+                    {value}
+                  </a>
+                ) : (
+                  <p className="mt-1 whitespace-pre-line text-xl font-medium leading-snug text-forest-900">{value}</p>
+                )}
+                <p className="mt-2 text-sm text-stone">{note}</p>
+              </div>
+            ))}
+          </div>
 
+          {/* Row 2: the two teams */}
+          <div className="grid gap-6 lg:grid-cols-2">
             <div id="billing" className="scroll-mt-28 rounded-[1.75rem] border border-forest-900/10 bg-white p-8">
               <div className="flex items-center gap-3">
                 <Receipt className="h-6 w-6 text-forest-500" aria-hidden="true" />
@@ -67,16 +70,19 @@ export default function Contact() {
             </div>
           </div>
 
-          <aside className="space-y-6 lg:col-span-5">
-            <div className="rounded-[1.75rem] border border-forest-900/10 bg-white p-6 text-sm text-ink/75">
-              Visits happen where you live: in your assisted living, memory care or long-term care community. The office address is for
-              correspondence and billing.
+          {/* Row 3: notes */}
+          <div className="grid gap-6 lg:grid-cols-2">
+            <div className="rounded-[1.75rem] border border-forest-900/10 bg-white p-7 text-ink/75">
+              <p className="font-semibold text-forest-900">Where visits happen</p>
+              <p className="mt-1">
+                In your assisted living, memory care or long-term care community. The office address is for correspondence and billing.
+              </p>
             </div>
-            <div className="rounded-[1.75rem] bg-forest-900 p-8 text-cream">
+            <div className="rounded-[1.75rem] bg-forest-900 p-7 text-cream">
               <p className="font-semibold">Medical emergency?</p>
-              <p className="mt-1 text-cream/75">Call 911 or go to the nearest emergency room. This website and email are not monitored for urgent needs.</p>
+              <p className="mt-1 text-cream/75">Call 911 or go to the nearest emergency room. This website is not monitored for urgent needs.</p>
             </div>
-          </aside>
+          </div>
         </div>
       </Section>
 
