@@ -12,9 +12,9 @@ export function LogoMark({ className = 'h-10 w-10' }: { className?: string }) {
 
 export default function Logo({ light = false }: { light?: boolean }) {
   return (
-    <Link to="/" className="group flex min-w-0 shrink-0 items-center gap-3" aria-label="Geriatric Professional Services, home">
+    <Link to="/" className="group flex shrink-0 items-center gap-3" aria-label="Geriatric Professional Services, home">
       <LogoMark className="h-10 w-10 transition-transform duration-300 group-hover:-rotate-6" />
-      <span className="min-w-0 leading-tight">
+      <span className="leading-tight">
         <span className={`font-display block text-base sm:whitespace-nowrap font-semibold tracking-wide sm:text-lg xl:text-[1.35rem] ${light ? 'text-cream' : 'text-forest-900'}`}>
           Geriatric Professional Services
         </span>
