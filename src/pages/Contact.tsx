@@ -19,11 +19,11 @@ export default function Contact() {
       <Section>
         <div className="grid gap-8 lg:grid-cols-12">
           <div className="space-y-6 lg:col-span-7">
-            <div className="grid gap-6 sm:grid-cols-2">
+            <div className="grid gap-6 sm:grid-cols-3">
               {[
                 { icon: Phone, label: 'Phone', value: site.phone, href: site.phoneHref },
                 { icon: Receipt, label: 'Billing department', value: site.billingPhone, href: site.billingPhoneHref },
-                { icon: MapPin, label: 'Office', value: `${site.address.street}, ${site.address.city}, ${site.address.state} ${site.address.zip}` },
+                { icon: MapPin, label: 'Office', value: `${site.address.street}\n${site.address.city}, ${site.address.state} ${site.address.zip}` },
               ].map(({ icon: Icon, label, value, href }: { icon: typeof Phone; label: string; value: string; href?: string }) => (
                 <div key={label} className="rounded-[1.75rem] border border-forest-900/10 bg-white p-6">
                   <Icon className="h-5 w-5 text-forest-500" aria-hidden="true" />
@@ -33,7 +33,7 @@ export default function Contact() {
                       {value}
                     </a>
                   ) : (
-                    <p className="mt-1 text-lg font-medium text-forest-900">{value}</p>
+                    <p className="mt-1 whitespace-pre-line text-lg font-medium text-forest-900">{value}</p>
                   )}
                 </div>
               ))}
