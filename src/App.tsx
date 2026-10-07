@@ -17,7 +17,6 @@ import RefundPolicy from './pages/RefundPolicy'
 import Accessibility from './pages/Accessibility'
 import Nondiscrimination from './pages/Nondiscrimination'
 import NotFound from './pages/NotFound'
-import LogoOptions from './pages/LogoOptions'
 
 export default function App() {
   return (
@@ -48,7 +47,6 @@ export default function App() {
           <Route path="/refund-policy" element={<RefundPolicy />} />
           <Route path="/accessibility" element={<Accessibility />} />
           <Route path="/nondiscrimination" element={<Nondiscrimination />} />
-          <Route path="/logo-options" element={<LogoOptions />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

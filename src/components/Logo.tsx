@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom'
 
 /**
- * Practice logo (option 1, olive branch). Dr. Tourk is still choosing between the
- * concepts on /logo-options; swap the two image paths here once he decides.
+ * Practice logo (option 5, serif G with leaf, chosen by Dr. Tourk on Oct 7 2026). Final files live in public/brand/transparent. The
+ * favicon tiles in public/ are generated from the same mark by scripts/derive-logo.py.
  */
-const LOGO = '/brand/transparent/01-olive-branch-navbar.png'
-const LOGO_CREAM = '/brand/transparent/01-olive-branch-navbar-cream.png'
+const LOGO = '/brand/transparent/05-serif-g-leaf-navbar.png'
+const LOGO_CREAM = '/brand/transparent/05-serif-g-leaf-navbar-cream.png'
 
 export default function Logo({ light = false }: { light?: boolean }) {
   return (
@@ -14,8 +14,8 @@ export default function Logo({ light = false }: { light?: boolean }) {
         src={light ? LOGO_CREAM : LOGO}
         alt="Geriatric Professional Services"
         className="h-8 w-auto sm:h-9 xl:h-10"
-        width={1648}
-        height={196}
+        width={1790}
+        height={222}
         decoding="async"
       />
     </Link>
